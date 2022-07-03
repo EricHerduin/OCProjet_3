@@ -1,0 +1,10 @@
+.explain__list--btn,
+.commander--btn {
+  @include center();
+  @include button(200px);
+  transition: 400ms;
+  &:hover {
+    @extend %shadow-more;
+    background: $linear-lighten;
+  }
+}

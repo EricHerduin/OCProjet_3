@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style_menu.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,48 +25,146 @@
           ohmyfood
         </h1>
       </div>
-      <div>
-        <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" />
-      </div>
     </header>
     <main>
+      <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" />
       <div class="menu">
-        <h3>La note enchantée</h3>
-        <div class="menu_list">
-          <div class="titre_menu">ENTREES</div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
+        <div class="menu__titre">
+          <h3>La note enchantée</h3>
+          <a href="http://#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+
+        <div class="menu__list">
+          <div class="menu__titre--underscore">ENTREES</div>
+
+          <a href="http://#" class="menu__card"
+            ><div class="menu__choice">
+              <h6>Ravioles de foie gras</h6>
+              <p>Accompagnés de leur crème à la truffe</p>
+            </div>
+            <div class="menu__price">25€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i></div
+          ></a>
+
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Caviar osciètre</h6>
+              <p>Sur blini à la farine de blé noir</p>
+            </div>
+            <div class="menu__price">35€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i></div
+          ></a>
+
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Homard et espuma de potiron</h6>
+              <p>Mariné aux zestes d'orange</p>
+            </div>
+            <div class="menu__price">20€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Foie gras de canard cuit entier</h6>
+              <p>Foie gras de canard cuit entier</p>
+            </div>
+            <div class="menu__price">35€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+        </div>
+        <div class="menu__list">
+          <div class="menu__titre--underscore">PLATS</div>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Noix de coquilles Saint-Jacques</h6>
+              <p>Sur lit de purée de céleri-rave</p>
+            </div>
+            <div class="menu__price">40€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Langoustine poêlée</h6>
+              <p>Purée de patate douce</p>
+            </div>
+            <div class="menu__price">35€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Mijoté de queue de boeuf</h6>
+              <p>Et riz sauvage aux zestes de citron</p>
+            </div>
+            <div class="menu__price">44€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
         </div>
         <div class="menu_list">
-          <div class="titre_menu">PLATS</div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
+          <div class="menu__titre--underscore">DESSERTS</div>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Macaron noisette et chocolat</h6>
+              <p>Glace au caramel brun et sel de Guérande</p>
+            </div>
+            <div class="menu__price">18€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Baba au rhum revisité</h6>
+              <p>Avec son coulis de citron</p>
+            </div>
+            <div class="menu__price">22€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
+          <a href="http://#" class="menu__card">
+            <div class="menu__choice">
+              <h6>Tarte au citron meringuée</h6>
+              <p>Déstructurée</p>
+            </div>
+            <div class="menu__price">23€</div>
+            <div class="menu__check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </a>
         </div>
-        <div class="menu_list">
-          <div class="titre_menu">DESSERTS</div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
-          <div class="flex_menu"></div>
-        </div>
-        <a href="" class="commander">Commander</a>
+        <a href="mailto:test@test.com" class="commander--btn">Commander</a>
       </div>
     </main>
-    <footer>
+    <footer class="flexfooter">
       <h1>Ohmyfood</h1>
-      <div class="flex-footer">
-        <div class="flex-i-footer">
-          <i class="fa-solid fa-utensils"></i
-          ><i class="fa-solid fa-handshake-angle"></i>
-        </div>
-        <div class="text-footer">
+      <div class="flexfooter__heading">
+        <div class="flexfooter__list">
+          <i class="fa-solid fa-utensils"></i>
           <p>Proposer un restaurant</p>
+        </div>
+        <div class="flexfooter__list">
+          <i class="fa-solid fa-handshake-angle"></i>
           <p>Devenir partenaire</p>
         </div>
+        <div class="flexfooter__list">
+          <p>Mentions légales</p>
+        </div>
+        <div class="flexfooter__list">
+          <p>Contact</p>
+        </div>
       </div>
-      <p>Mentions légales</p>
-      <p>Contact</p>
     </footer>
   </body>
 </html>

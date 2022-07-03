@@ -1,0 +1,57 @@
+@mixin font-shrikhand($size: 30px) {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  font-size: $size;
+}
+@mixin flex($flow: row, $width: 100%, $height: auto) {
+  display: flex;
+  flex-flow: $flow;
+  width: $width;
+  height: $height;
+  justify-content: space-around;
+}
+@mixin center($width: 80%) {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin button($width: 280px, $lineheight: 40px) {
+  width: $width;
+  font-weight: 400;
+  margin-top: 20px;
+  text-align: center;
+  background: $linear;
+  line-height: $lineheight;
+  color: white;
+  border-radius: 20px;
+  @extend %shadow;
+  align-items: center;
+}
+
+@mixin explain($width: 280px, $fontweight: 400) {
+  width: $width;
+  font-weight: $fontweight;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@mixin h4 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 40px;
+  @include center(80%);
+  width: 400px;
+  margin-bottom: 40px;
+
+  @include desktop(tablet) {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@mixin desktop($size: desktop) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

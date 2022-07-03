@@ -1,0 +1,146 @@
+.explain {
+  @include flex(column);
+  align-items: center;
+  height: auto;
+  padding: 30px;
+  background: linear-gradient(rgb(242, 242, 242), 90%, rgb(239, 238, 238));
+  &__list {
+    @include explain();
+  }
+  h2 {
+    @include explain(200px, 700);
+    font-size: 20px;
+  }
+}
+
+.fct {
+  @include flex(column);
+  @include desktop(tablet) {
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__card {
+    @include flex(row, 270px);
+    @include center(280px);
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    background: rgb(242, 242, 242);
+    line-height: 70px;
+    @extend %radius;
+    @extend %shadow;
+  }
+  &__card:nth-of-type(3) {
+    background: lighten($color: $color-primaire, $amount: 30%);
+    .fct__logo {
+      color: $color-primaire;
+    }
+  }
+
+  &__number {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: $color-primaire;
+    border-radius: 50%;
+    margin-left: -10px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__logo {
+    width: 20px;
+    margin-left: 15px;
+    align-items: center;
+  }
+  &__text {
+    margin-left: 15px;
+    font-weight: 500;
+  }
+}
+
+.restau {
+  background: rgb(242, 242, 242);
+  padding-top: 40px;
+  height: auto;
+  @include flex(column, 100%);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include desktop(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    padding-bottom: 40px;
+  }
+  &__card {
+    @include flex(column);
+    @include center(80%);
+    position: relative;
+    width: 400px;
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+    background: white;
+    @extend %radius;
+    @extend %shadow;
+    & a {
+      height: auto;
+    }
+  }
+  &__img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  &__new {
+    width: 100px;
+    line-height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 500;
+    background: $color-tertiaire;
+    color: darken($color: $color-tertiaire, $amount: 40%);
+  }
+  &__text {
+    @include flex(row, 100%);
+    justify-content: space-between;
+    padding: 10px;
+
+    i {
+      font-size: 25px;
+      font-weight: 200;
+    }
+  }
+  &__like {
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+
+    &--active {
+      position: absolute;
+      right: 15px;
+      color: $color-primaire;
+    }
+  }
+
+  &__like:focus {
+    visibility: hidden;
+  }
+}

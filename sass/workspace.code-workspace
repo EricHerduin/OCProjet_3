@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../dart-sass"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "OCProjet3"
+  }
+}

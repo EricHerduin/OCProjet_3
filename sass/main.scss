@@ -1,0 +1,46 @@
+@import "./Utils/variables";
+@import "./Utils/mixin";
+@import "./Utils/placeholder";
+@import "./Base/base";
+@import "./Base/typographie";
+@import "./Composants/buttons";
+@import "./Layout/header";
+@import "./Layout/footer";
+@import "./Pages/index";
+@import "./Pages/menu";
+
+/* loading spinner*/
+.loading {
+  display: none;
+}
+/* @keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.loading {
+  @include flex(column, 100%);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  min-height: 1980px;
+  background: $color-primaire;
+  animation: fadeout 5s;
+  @include flex(column, 100%);
+  visibility: hidden;
+  &__title {
+    @include font-shrikhand;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    background-color: $color-tertiaire;
+  }
+}
+*/

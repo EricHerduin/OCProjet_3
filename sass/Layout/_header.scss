@@ -1,0 +1,41 @@
+.title {
+  @include flex(row, 100%);
+  justify-content: flex-start;
+  a {
+    line-height: 50px;
+    width: 20%;
+    text-align: center;
+  }
+  h1 {
+    width: 60%;
+  }
+  &__index {
+    line-height: 50px;
+    margin-bottom: 3px;
+    box-shadow: 0px 0px 7px rgb(110, 111, 111);
+    @include desktop {
+      padding-left: 70px;
+      text-align: left;
+    }
+  }
+}
+.location {
+  @include flex(row);
+  justify-content: center;
+  margin-top: 3px;
+  height: 40px;
+  line-height: 40px;
+  background: rgb(231, 229, 229);
+  i {
+    font-size: 16px;
+    line-height: 40px;
+    width: 30px;
+  }
+  input {
+    width: 120px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-weight: 700;
+  }
+}

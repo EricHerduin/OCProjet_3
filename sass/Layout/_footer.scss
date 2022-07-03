@@ -1,0 +1,61 @@
+.flexfooter {
+  background-color: grey;
+  height: auto;
+  margin-right: auto;
+  align-items: left;
+  color: white;
+  @include flex(column);
+  @include desktop(tablet) {
+    flex-direction: row;
+    line-height: 100px;
+  }
+
+  h1 {
+    @include font-shrikhand(16px);
+
+    max-width: 450px;
+    line-height: 70px;
+    padding-left: 30px;
+    text-align: left;
+    @include desktop(tablet) {
+      width: 200px;
+      max-width: 200px;
+      margin: 0px;
+    }
+  }
+  &__heading {
+    @include flex(column, 100%);
+    @include desktop(tablet) {
+      flex-direction: row;
+      max-width: none;
+      align-items: center;
+      line-height: 100px;
+
+      width: 85%;
+    }
+    padding-left: 30px;
+    max-width: 450px;
+    width: auto;
+  }
+  &__list {
+    @include flex(row);
+    justify-content: flex-start;
+    color: white;
+    font-weight: 500;
+
+    @include desktop(tablet) {
+      width: 25%;
+    }
+    i {
+      margin-right: 20px;
+      width: 15px;
+      line-height: 30px;
+      @include desktop(tablet) {
+        margin-right: 8px;
+      }
+    }
+    p {
+      line-height: 30px;
+    }
+  }
+}

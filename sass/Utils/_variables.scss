@@ -1,0 +1,14 @@
+$color-primaire: #9356dc;
+$color-secondaire: #ff79da;
+$color-tertiaire: #99e2d0;
+$breakpoints: (
+  mobile: 500px,
+  tablet: 960px,
+  desktop: 1400px,
+);
+$linear: linear-gradient(178deg, $color-secondaire, $color-primaire);
+$linear-lighten: linear-gradient(
+  178deg,
+  lighten($color-secondaire, 5%),
+  lighten($color-primaire, 5%)
+);
