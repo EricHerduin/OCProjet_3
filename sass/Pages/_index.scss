@@ -7,6 +7,10 @@
   &__list {
     @include explain();
   }
+  h2 {
+    @include explain(200px, 700);
+    font-size: 20px;
+  }
 }
 
 .fct {

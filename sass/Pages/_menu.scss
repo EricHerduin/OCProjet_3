@@ -82,6 +82,16 @@ img {
     align-self: center;
     min-width: 70%;
     white-space: nowrap;
+
+    h6 {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis " ...";
+      align-self: center;
+    }
     p {
       font-size: 15px;
       font-weight: 200;
@@ -126,9 +136,9 @@ img {
     }
     .menu__check {
       width: 50px;
-      .fa-circle-check {
-        transform: none;
-      }
+    }
+    .fa-circle-check {
+      transform: rotateZ(0deg);
     }
   }
   @keyframes fadein {

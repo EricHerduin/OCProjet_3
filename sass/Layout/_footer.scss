@@ -12,6 +12,7 @@
 
   h1 {
     @include font-shrikhand(16px);
+
     max-width: 450px;
     line-height: 70px;
     padding-left: 30px;
@@ -29,6 +30,7 @@
       max-width: none;
       align-items: center;
       line-height: 100px;
+
       width: 85%;
     }
     padding-left: 30px;
@@ -40,6 +42,7 @@
     justify-content: flex-start;
     color: white;
     font-weight: 500;
+
     @include desktop(tablet) {
       width: 25%;
     }

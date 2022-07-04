@@ -16,10 +16,6 @@ h1 {
   @include font-shrikhand;
   text-align: center;
 }
-h2 {
-  @include explain(200px, 700);
-  font-size: 20px;
-}
 h3 {
   @include font-shrikhand(26px);
   padding-left: 20px;
@@ -32,13 +28,4 @@ h4 {
 }
 h5 {
   font-weight: 600;
-}
-h6 {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 5px;
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis " ...";
-  align-self: center;
 }
