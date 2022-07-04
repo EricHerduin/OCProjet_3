@@ -97,6 +97,9 @@
     & a {
       height: auto;
     }
+    &:hover {
+      @extend %shadow-more;
+    }
   }
   &__img {
     height: 180px;
@@ -122,25 +125,5 @@
     @include flex(row, 100%);
     justify-content: space-between;
     padding: 10px;
-
-    i {
-      font-size: 25px;
-      font-weight: 200;
-    }
-  }
-  &__like {
-    position: absolute;
-    right: 15px;
-    z-index: 1;
-
-    &--active {
-      position: absolute;
-      right: 15px;
-      color: $color-primaire;
-    }
-  }
-
-  &__like:focus {
-    visibility: hidden;
   }
 }

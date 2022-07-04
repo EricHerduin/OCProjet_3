@@ -8,3 +8,34 @@
     background: $linear-lighten;
   }
 }
+
+@keyframes glissement {
+  from {
+    height: 25px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+.restau {
+  &__like {
+    position: absolute;
+    font-size: 25px;
+    right: 15px;
+    z-index: 1;
+    background-color: white;
+    transition: 400ms;
+    &:focus {
+      visibility: hidden;
+      animation: glissement 1s;
+    }
+
+    &--active {
+      position: absolute;
+      font-size: 25px;
+      right: 15px;
+      color: $color-primaire;
+    }
+  }
+}
