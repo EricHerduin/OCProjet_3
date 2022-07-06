@@ -1,3 +1,66 @@
+@keyframes fadeout {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  @include flex(column, 100%);
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  min-height: 1980px;
+
+  animation: seconds 2s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+  background: $color-secondaire;
+  opacity: 1;
+
+  &__title {
+    @include font-shrikhand(14px);
+    margin: auto;
+    margin-top: 450px;
+    color: $color-primaire;
+
+    top: 22%;
+    z-index: 10003;
+  }
+
+  &__bar {
+    height: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+      z-index: 10002;
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      margin: -5px 0 0 -5px;
+      background-color: $color-tertiaire;
+
+      width: 10px;
+      height: 10px;
+      animation: fadeout 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+    }
+  }
+}
+
 .explain {
   @include flex(column);
   align-items: center;
