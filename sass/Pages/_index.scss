@@ -23,11 +23,11 @@
   z-index: 999;
   width: 100%;
   min-height: 1980px;
-
-  animation: seconds 2s forwards;
+  background-color: $color-secondaire;
+  animation: seconds 1.5s forwards;
   animation-iteration-count: 1;
   animation-delay: 5s;
-  background: $color-secondaire;
+
   opacity: 1;
 
   &__title {
@@ -40,24 +40,26 @@
     z-index: 10003;
   }
 
-  &__bar {
-    height: 15px;
+  @for $i from 1 to 4 {
+    &__bar:nth-of-type(#{$i}) {
+      height: 15px;
 
-    margin-left: auto;
-    margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
 
-    &::after {
-      z-index: 10002;
-      content: "";
-      position: absolute;
-      top: 25%;
-      left: 25%;
-      margin: -5px 0 0 -5px;
-      background-color: $color-tertiaire;
+      &::after {
+        z-index: 10002;
+        content: "";
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        margin: -5px 0 0 -5px;
+        background-color: $color-tertiaire;
 
-      width: 10px;
-      height: 10px;
-      animation: fadeout 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+        width: 10px;
+        height: 10px;
+        animation: fadeout 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+      }
     }
   }
 }
