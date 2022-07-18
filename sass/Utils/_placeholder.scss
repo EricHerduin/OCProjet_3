@@ -13,3 +13,6 @@
 %shadow-more {
   box-shadow: 2px 2px 30px rgb(51, 52, 52);
 }
+%linear_like {
+  color: linear-gradient(2deg, $color-secondaire, $color-primaire);
+}

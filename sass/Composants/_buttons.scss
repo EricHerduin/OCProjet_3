@@ -1,41 +1,62 @@
+/*Harmonie des boutons gradient linear*/
 .explain__list--btn,
 .commander--btn {
   @include center();
-  @include button(200px);
-  transition: 400ms;
-  &:hover {
-    @extend %shadow-more;
+  @include button(200px, 40px);
+  position: relative;
+  z-index: 1;
+  &:hover,
+  :active {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    @include pseudo-pos;
     background: $linear-lighten;
+    border-radius: 20px;
+    @extend %shadow-more;
   }
 }
 
-@keyframes glissement {
-  from {
-    height: 25px;
-  }
-  to {
-    height: 0px;
-  }
-}
-
-.restau {
+/*Bouton like fa-heart*/
+.restau,
+.menu {
   &__like {
+    font-weight: 100;
     position: absolute;
     font-size: 25px;
-    right: 15px;
+    top: 190px;
+    right: 10px;
+    background: transparent;
     z-index: 1;
-    background-color: white;
-    transition: 400ms;
-    &:focus {
-      visibility: hidden;
-      animation: glissement 1s;
-    }
 
-    &--active {
-      position: absolute;
-      font-size: 25px;
-      right: 15px;
-      color: $color-primaire;
+    &:focus {
+      &::after {
+        opacity: 1;
+        z-index: 2;
+      }
     }
+    &::after {
+      @include pseudo-pos;
+      top: Opx;
+      z-index: -1;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f004";
+      background-image: linear-gradient(
+        2deg,
+        $color-secondaire,
+        $color-primaire
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+    }
+  }
+
+  .menu__like {
+    top: 40px;
+    z-index: 3;
   }
 }

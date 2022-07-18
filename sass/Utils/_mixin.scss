@@ -39,13 +39,14 @@
 @mixin h4 {
   font-weight: bold;
   font-size: 20px;
-  margin-left: 40px;
-  @include center(80%);
-  width: 400px;
+  @include center(95%);
+
+  max-width: 450px;
   margin-bottom: 40px;
 
   @include desktop(tablet) {
     width: 100%;
+    padding-left: 70px;
     max-width: none;
   }
 }
@@ -54,4 +55,16 @@
   @media screen and (min-width: map-get($breakpoints, $size)) {
     @content;
   }
+}
+
+@mixin pseudo-pos {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 200ms;
 }

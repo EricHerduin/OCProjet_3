@@ -4,6 +4,7 @@ img {
   max-height: 300px;
   z-index: 1;
 }
+
 .menu {
   @include flex(column, 100%);
   @include center(100%);
@@ -15,6 +16,9 @@ img {
   padding-bottom: 40px;
   position: relative;
   z-index: 2;
+  @include desktop(tablet) {
+    @include center(75%);
+  }
 
   &__titre {
     @include flex(row, 100%);
@@ -24,13 +28,9 @@ img {
     margin-right: 20px;
     margin-top: 35px;
 
-    h3 {
-      font-size: 30px;
-      font-weight: 500;
-    }
     i {
-      margin-right: 30px;
-      font-weight: 100;
+      margin-right: 10px;
+      cursor: pointer;
     }
 
     &--underscore {
@@ -46,120 +46,83 @@ img {
   }
 
   &__card {
+    display: block;
     @include flex(row, 95%);
     @include center(95%);
     justify-content: space-between;
     min-height: 70px;
     margin-top: 10px;
-    padding-left: 10px;
     margin-bottom: 10px;
     background: white;
     border-radius: 8px;
     position: relative;
     top: 20px;
-    transition: 400ms;
-    .fa-circle-check {
-      transition: 600ms ease-in-out;
-      transform: rotateZ(720deg);
+    transition: all 800ms ease-in-out;
+    @include desktop(tablet) {
+      @include center(75%);
+    }
+    &:focus {
+      .menu__choice {
+        width: 69%;
+      }
+      .menu__price {
+        width: 9%;
+      }
+      .menu__check {
+        width: 20%;
+      }
+      .fa-circle-check {
+        animation: rotation 1s;
+        -moz-animation: rotation 1s;
+      }
     }
   }
 
   &__check {
     width: 0%;
+    position: relative;
     line-height: 70px;
-    transition: 600ms ease-in-out;
+    transition: all 800ms ease-in-out;
     color: white;
     text-align: center;
     align-self: center;
+    font-size: 20px;
     background: $color-tertiaire;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     white-space: nowrap;
     overflow: hidden;
+    z-index: 1;
   }
 
   &__choice {
     align-self: center;
-    min-width: 70%;
+    text-align: left;
+    width: 77%;
+    min-width: 55%;
+    max-width: 77%;
     white-space: nowrap;
-
-    h6 {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
-      white-space: normal;
-      overflow: hidden;
-      text-overflow: ellipsis " ...";
-      align-self: center;
-    }
-    p {
-      font-size: 15px;
-      font-weight: 200;
-      overflow: hidden;
-      text-overflow: ellipsis " ...";
-      align-self: center;
-    }
+    transition: all 600ms ease-in-out;
   }
   &__price {
-    align-self: flex-end;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 10px;
-    margin-left: 30px;
-
     width: 10%;
+    align-self: flex-end;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-right: 5px;
+    margin-left: 30px;
     text-align: right;
+    transition: all 700ms ease-in-out;
   }
-  &__card:hover {
-    .menu__choice {
-      width: 70%;
-      transition: 600ms ease-in-out;
-    }
-    .menu__price {
-      width: 10%;
-      transition: 600ms ease-in-out;
-    }
-    .menu__check {
-      width: 50px;
-      transition: 600ms ease-in-out;
-    }
-    .fa-circle-check {
-      transform: rotateZ(-720deg);
-      transition: 600ms ease-in-out;
-    }
-  }
-  &__card:focus {
-    .menu__choice {
-      width: 70%;
-    }
-    .menu__price {
-      width: 10%;
-    }
-    .menu__check {
-      width: 50px;
-    }
-    .fa-circle-check {
-      transform: rotateZ(-720deg);
-    }
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-      top: 30px;
-    }
-    to {
-      opacity: 1;
+}
+@for $i from 1 to 5 {
+  .menu {
+    &__card:nth-of-type(#{$i}) {
+      animation: fadein calc(($i) / 5 * 2) + s;
+      animation-timing-function: ease-in;
       top: 0px;
-    }
-  }
-  @for $i from 1 to 5 {
-    .menu {
-      &__card:nth-of-type(#{$i}) {
-        animation: fadein calc(($i) / 5 * 2) + s;
-        animation-timing-function: ease-in;
-        /*animation-delay: fadein calc(($i) / 5 * 1) + s;*/
-        top: 0px;
-      }
     }
   }
 }
