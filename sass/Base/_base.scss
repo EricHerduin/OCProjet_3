@@ -118,9 +118,9 @@ th {
 /*animation de la rotation du check dans les menus */
 @keyframes rotation {
   0% {
-    rotate: 90deg;
+    transform: rotate(90deg);
   }
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
