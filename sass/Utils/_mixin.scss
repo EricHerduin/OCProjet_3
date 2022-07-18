@@ -36,21 +36,6 @@
   text-align: center;
 }
 
-@mixin h4 {
-  font-weight: bold;
-  font-size: 20px;
-  @include center(95%);
-
-  max-width: 450px;
-  margin-bottom: 40px;
-
-  @include desktop(tablet) {
-    width: 100%;
-    padding-left: 70px;
-    max-width: none;
-  }
-}
-
 @mixin desktop($size: desktop) {
   @media screen and (min-width: map-get($breakpoints, $size)) {
     @content;

@@ -61,6 +61,21 @@ img {
     @include desktop(tablet) {
       @include center(75%);
     }
+    &:hover {
+      .menu__choice {
+        width: 69%;
+      }
+      .menu__price {
+        width: 9%;
+      }
+      .menu__check {
+        width: 20%;
+      }
+      .fa-circle-check {
+        animation: rotation 1s;
+        -moz-animation: rotation 1s;
+      }
+    }
     &:focus {
       .menu__choice {
         width: 69%;

@@ -2,7 +2,7 @@
   background-color: grey;
   height: auto;
   margin-right: auto;
-  align-items: left;
+  align-items: flex-start;
   color: white;
   @include flex(column);
   @include desktop(tablet) {
@@ -56,6 +56,10 @@
     }
     p {
       line-height: 30px;
+    }
+    &--contact {
+      color: white;
+      font-weight: 400;
     }
   }
 }
