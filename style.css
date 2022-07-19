@@ -314,6 +314,11 @@ h6 {
   z-index: 3;
 }
 
+.menu__choice,
+.menu__price {
+  color: black;
+}
+
 .title {
   display: flex;
   flex-flow: row;
