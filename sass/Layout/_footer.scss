@@ -23,7 +23,8 @@
       margin: 0px;
     }
   }
-  a {
+  a,
+  p {
     color: white;
   }
   &__heading {
@@ -58,7 +59,6 @@
         margin-right: 8px;
       }
     }
-    a,
     p {
       line-height: 30px;
       color: white;

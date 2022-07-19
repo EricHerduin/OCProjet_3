@@ -400,7 +400,8 @@ h6 {
     margin: 0px;
   }
 }
-.flexfooter a {
+.flexfooter a,
+.flexfooter p {
   color: white;
 }
 .flexfooter__heading {
@@ -448,7 +449,6 @@ h6 {
     margin-right: 8px;
   }
 }
-.flexfooter__list a,
 .flexfooter__list p {
   line-height: 30px;
   color: white;
