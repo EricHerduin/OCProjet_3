@@ -23,6 +23,9 @@
       margin: 0px;
     }
   }
+  a {
+    color: white;
+  }
   &__heading {
     @include flex(column, 100%);
     @include desktop(tablet) {
@@ -45,6 +48,7 @@
 
     @include desktop(tablet) {
       width: 25%;
+      color: white;
     }
     i {
       margin-right: 20px;
@@ -54,12 +58,10 @@
         margin-right: 8px;
       }
     }
+    a,
     p {
       line-height: 30px;
-    }
-    &--contact {
       color: white;
-      font-weight: 400;
     }
   }
 }

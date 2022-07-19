@@ -45,12 +45,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p,
-button {
+h6 {
   font-size: 100%;
   font-weight: normal;
-  color: black;
 }
 
 ul {
@@ -403,6 +400,9 @@ h6 {
     margin: 0px;
   }
 }
+.flexfooter a {
+  color: white;
+}
 .flexfooter__heading {
   display: flex;
   flex-flow: column;
@@ -435,6 +435,7 @@ h6 {
 @media screen and (min-width: 960px) {
   .flexfooter__list {
     width: 25%;
+    color: white;
   }
 }
 .flexfooter__list i {
@@ -447,12 +448,10 @@ h6 {
     margin-right: 8px;
   }
 }
+.flexfooter__list a,
 .flexfooter__list p {
   line-height: 30px;
-}
-.flexfooter__list--contact {
   color: white;
-  font-weight: 400;
 }
 
 .loading {
