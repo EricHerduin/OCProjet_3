@@ -1,6 +1,7 @@
 .flexfooter {
   background-color: grey;
   height: auto;
+  padding-right: 100px;
   margin-right: auto;
   align-items: flex-start;
   color: white;
@@ -34,8 +35,7 @@
       max-width: none;
       align-items: center;
       line-height: 100px;
-
-      width: 85%;
+      width: 70%;
     }
     padding-left: 15px;
     max-width: 450px;
