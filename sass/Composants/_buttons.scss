@@ -41,7 +41,6 @@
     }
     &::after {
       @include pseudo-pos;
-      top: Opx;
       z-index: -1;
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
