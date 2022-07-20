@@ -283,12 +283,12 @@ h6 {
   top: 190px;
   right: 10px;
   background: transparent;
-  z-index: 1;
+  z-index: 4;
 }
 .restau__like:focus::after,
 .menu__like:focus::after {
   opacity: 1;
-  z-index: 2;
+  z-index: 5;
 }
 .restau__like::after,
 .menu__like::after {
@@ -320,6 +320,41 @@ h6 {
 .menu__choice,
 .menu__price {
   color: black;
+}
+
+.menu__card--btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 0;
+}
+.menu__card--btn:hover + .menu__choice {
+  width: 69%;
+}
+.menu__card--btn:hover + .menu__choice + .menu__price {
+  width: 9%;
+}
+.menu__card--btn:hover + .menu__choice + .menu__price + .menu__check {
+  width: 20%;
+}
+.menu__card--btn:hover + .menu__choice + .menu__price + .menu__check > .fa-circle-check {
+  animation: rotation 1s;
+}
+.menu__card--btn:focus + .menu__choice {
+  width: 69%;
+}
+.menu__card--btn:focus + .menu__choice + .menu__price {
+  width: 9%;
+}
+.menu__card--btn:focus + .menu__choice + .menu__price + .menu__check {
+  width: 20%;
+}
+.menu__card--btn:focus + .menu__choice + .menu__price + .menu__check > .fa-circle-check {
+  animation: rotation 1s;
 }
 
 .title {
@@ -745,7 +780,14 @@ h6 {
   }
 }
 .restau__card a {
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 3;
+  text-indent: -9999px;
 }
 .restau__img {
   height: 180px;
@@ -866,32 +908,42 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-}
-.menu__card:hover .menu__choice {
-  width: 69%;
-}
-.menu__card:hover .menu__price {
-  width: 9%;
-}
-.menu__card:hover .menu__check {
-  width: 20%;
-}
-.menu__card:hover .fa-circle-check {
-  animation: rotation 1s;
-  -moz-animation: rotation 1s;
-}
-.menu__card:focus .menu__choice {
-  width: 69%;
-}
-.menu__card:focus .menu__price {
-  width: 9%;
-}
-.menu__card:focus .menu__check {
-  width: 20%;
-}
-.menu__card:focus .fa-circle-check {
-  animation: rotation 1s;
-  -moz-animation: rotation 1s;
+  .menu__card button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .menu__card button:hover .menu__choice {
+    width: 69%;
+  }
+  .menu__card button:hover .menu__price {
+    width: 9%;
+  }
+  .menu__card button:hover .menu__check {
+    width: 20%;
+  }
+  .menu__card button:hover .fa-circle-check {
+    animation: rotation 1s;
+    -moz-animation: rotation 1s;
+  }
+  .menu__card buttonbutton:focus .menu__choice {
+    width: 69%;
+  }
+  .menu__card buttonbutton:focus .menu__price {
+    width: 9%;
+  }
+  .menu__card buttonbutton:focus .menu__check {
+    width: 20%;
+  }
+  .menu__card buttonbutton:focus .fa-circle-check {
+    animation: rotation 1s;
+    -moz-animation: rotation 1s;
+  }
 }
 .menu__check {
   width: 0%;
