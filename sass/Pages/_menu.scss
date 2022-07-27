@@ -142,7 +142,7 @@ img {
     transition: all 700ms ease-in-out;
   }
 }
-@for $i from 1 to 5 {
+@for $i from 1 to 6 {
   .menu {
     &__card:nth-of-type(#{$i}) {
       animation: fadein calc(($i) / 5 * 2) + s;
